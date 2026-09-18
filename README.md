@@ -6,7 +6,7 @@ Praktische Installationspakete für saubere Arbeitsübergaben in Coding-Agenten.
 Sie helfen dabei, den Arbeitsstand vor einem Session-Ende oder einer
 Context-Compaction nachvollziehbar zu sichern.
 
-[Deutsche Anleitung](docs/guides/INSTALLATION.de.md) · [English guide](README.en.md)
+[🇩🇪 Deutsche Anleitung](docs/guides/INSTALLATION.de.md) · [🇬🇧 English guide](README.en.md)
 
 ## Für wen ist das?
 

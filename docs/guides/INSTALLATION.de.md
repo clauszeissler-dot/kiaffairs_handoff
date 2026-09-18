@@ -1,6 +1,6 @@
 # Installation und Auswahlumfang
 
-Zurück zur [Startseite](../../README.md) · [English version](INSTALLATION.en.md)
+[🇩🇪 Deutsche Startseite](../../README.md) · [🇬🇧 English version](INSTALLATION.en.md)
 
 1. Lade die aktuelle Codex-Datei aus [codex/releases](../../codex/releases/) herunter.
 2. Entpacke die ZIP-Datei.

@@ -1,6 +1,6 @@
 # Installation and scope selection
 
-Back to the [German start page](../../README.md) · [English overview](../../README.en.md)
+[🇩🇪 German start page](../../README.md) · [🇬🇧 English overview](../../README.en.md)
 
 1. Download the current Codex archive from [codex/releases](../../codex/releases/).
 2. Extract the ZIP file.

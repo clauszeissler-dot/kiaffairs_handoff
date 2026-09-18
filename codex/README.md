@@ -6,7 +6,7 @@ Die Codex-Variante sichert wichtige Arbeitsinformationen vor einer
 Context-Compaction und unterstützt vollständige Übergaben beim Session-Ende.
 Sie ist für Codex CLI ab Version 0.155.0 gedacht.
 
-[Deutsche Anleitung](README.md) · [English guide](README.en.md) ·
+[🇩🇪 Deutsch](README.md) · [🇬🇧 English](README.en.md) ·
 [Release-Dateien](releases/)
 
 ## Installieren

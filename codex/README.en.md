@@ -6,7 +6,7 @@ The Codex variant preserves important work information before context
 compaction and supports complete handoffs when a session ends. It requires
 Codex CLI 0.155.0 or later.
 
-[Deutsche Anleitung](README.md) · [English guide](README.en.md) ·
+[🇩🇪 Deutsch](README.md) · [🇬🇧 English](README.en.md) ·
 [Release files](releases/)
 
 ## Install

@@ -6,7 +6,7 @@ Practical installation packages for reliable handoffs in coding agents. They
 help preserve a useful work record before a session ends or the context is
 compacted.
 
-[Deutsche Anleitung](README.md) · [English guide](docs/guides/INSTALLATION.en.md)
+[🇩🇪 Deutsche Anleitung](README.md) · [🇬🇧 English guide](docs/guides/INSTALLATION.en.md)
 
 ## Who is this for?
 
