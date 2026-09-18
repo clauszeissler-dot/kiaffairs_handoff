@@ -30,7 +30,7 @@ Die ausführliche Codex-Anleitung findest du in [Deutsch](codex/README.md) und
 | Variante | Status | Zweck |
 | --- | --- | --- |
 | [Codex](codex/) | verfügbar | Interaktiver Installer, Handoff-Skill und optionaler Context-Snapshot |
-| [Claude](claude/) | in Vorbereitung | Eigene Claude-Implementierung mit separater Anleitung und Releases |
+| [Claude](claude/) | verfügbar | Handoff-Skill, `PreCompact`/`SessionEnd`-Hooks und optionaler Formulierungs-Nudge, installierbar über `bash claude/install.sh` |
 
 ## Was gesichert wird
 
@@ -51,12 +51,3 @@ Zustands-Snapshot in `docs/handoffs/` des aktuellen Projekts.
 ## Lizenz
 
 Dieses Repository steht unter der [GNU GPL v3](LICENSE).
-
-Installationspakete für strukturierte Übergaben und Context-Schutz in
-verschiedenen Coding-Agenten.
-
-- [`codex/`](codex/) enthält die Codex-Variante mit interaktivem Installer.
-- [`claude/`](claude/) ist für die gleichwertige Claude-Variante reserviert.
-
-Jede Variante wird separat versioniert, damit die agentenspezifischen Hooks und
-Installationsschritte klar voneinander getrennt bleiben.

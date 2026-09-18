@@ -30,7 +30,7 @@ and [English](codex/README.en.md).
 | Variant | Status | Purpose |
 | --- | --- | --- |
 | [Codex](codex/) | available | Interactive installer, handoff skill, and optional context snapshot |
-| [Claude](claude/) | planned | Separate Claude implementation with its own guide and releases |
+| [Claude](claude/) | available | Handoff skill, `PreCompact`/`SessionEnd` hooks, and an optional phrase nudge, installed via `bash claude/install.sh` |
 
 ## What is preserved
 

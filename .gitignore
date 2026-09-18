@@ -1,0 +1,18 @@
+# KI-Reasoning-/Session-Artefakte — nie ins Repo
+.claude/settings.local.json
+.claude/projects/
+*.thinking.json
+*reasoning_content*
+*chain_of_thought*
+*scratchpad*
+transcript*.json
+conversation*.json
+session*.json
+*.jsonl
+
+# OS / editor cruft
+.DS_Store
+*.swp
+
+# Local test output from install.sh dry-runs
+/docs/handoffs/
