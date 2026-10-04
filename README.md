@@ -17,19 +17,19 @@ Codex und Claude werden getrennt gepflegt.
 
 ## Schnellstart für Codex
 
-1. Lade das aktuelle ZIP aus [codex/releases](codex/releases/) herunter.
-2. Entpacke es und führe `python3 install.py` aus.
-3. Wähle nur die Bausteine aus, die du verwenden möchtest.
-4. Starte Codex neu und vertraue neue Hooks einmal über `/hooks`.
+1. Lade [ki-affairs-handoff-1.2.0.zip](codex/releases/ki-affairs-handoff-1.2.0.zip).
+2. Entpacke es und führe `python3 install.py` aus (Python 3.11 oder neuer).
+3. Starte Codex neu und prüfe/vertraue die Hooks über `/hooks`.
+4. Führe den [Funktionstest](codex/handoff-package/README.md) in einem harmlosen Projekt aus.
 
-Die ausführliche Codex-Anleitung findest du in [Deutsch](codex/README.md) und
-[Englisch](codex/README.en.md).
+Nur Handoff wird installiert. [Anleitung und Upgrade](codex/README.md).
+Die alte 1.1.0-Datei bleibt als historischer Stand erhalten, ist aber keine aktuelle Empfehlung.
 
 ## Varianten
 
 | Variante | Status | Zweck |
 | --- | --- | --- |
-| [Codex](codex/) | verfügbar | Interaktiver Installer, Handoff-Skill und optionaler Context-Snapshot |
+| [Codex](codex/) | verfügbar | Kleiner Installer, Handoff-Skill und lokaler Context-Snapshot |
 | [Claude](claude/) | verfügbar | Handoff-Skill, `PreCompact`/`SessionEnd`-Hooks und optionaler Formulierungs-Nudge, installierbar über `bash claude/install.sh` |
 
 ## Was gesichert wird

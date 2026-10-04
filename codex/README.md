@@ -1,80 +1,21 @@
-![KI AffAIrs](../docs/assets/ki-affairs-github-readme-banner.png)
+# KI AffAIrs Handoff für Codex
 
-# Codex-Handoff
+Aktuelles kleines Paket: [ki-affairs-handoff-1.2.0.zip](releases/ki-affairs-handoff-1.2.0.zip).
+Nur Handoff-Skill, lokaler Snapshot und Abschluss-Hinweis; Python 3.11+, macOS/Linux.
+[Anleitung und Funktionstest](handoff-package/README.md).
 
-Die Codex-Variante sichert wichtige Arbeitsinformationen vor einer
-Context-Compaction und unterstützt vollständige Übergaben beim Session-Ende.
-Sie ist für Codex CLI ab Version 0.155.0 gedacht.
+ZIP entpacken, `python3 install.py` ausführen, Codex neu starten, Hooks über `/hooks`
+prüfen und vertrauen. Bestehende abweichende Handoff-Dateien werden sicher abgelehnt.
+Für ein bewusstes Upgrade erst die Änderungen prüfen, dann `python3 install.py --overwrite`.
+Backups entstehen vor Ersetzung. Frühere selbst eingerichtete Hook-Einträge prüfen;
+das Paket entfernt keine fremden Hooks.
 
-[🇩🇪 Deutsch](README.md) · [🇬🇧 English](README.en.md) ·
-[Release-Dateien](releases/)
+Das frühere Consultant-Toolkit 1.1.0 ist historisch und nicht die aktuelle Empfehlung:
+sein Installer enthält bekannte Fehler bei Pfaden mit Leerzeichen und TOML-Sektionen.
+Die Zusatzmodule dieses alten Archivs gehören nicht zum neuen kleinen Handoff-Paket.
 
-## Installieren
+Ein automatischer Snapshot ist kein vollständiges Handoff. Die 20-Prozent-Einstellung
+steuert automatische Compaction; sie leert nicht den Chat und garantiert keine
+fehlerfreien Antworten. Vollständige Übergabe schreiben und prüfen, dann neu starten.
 
-Lade die aktuelle ZIP-Datei aus [releases](releases/) herunter, entpacke sie
-und starte im entpackten Ordner:
-
-```sh
-python3 install.py
-```
-
-Der Installer fragt dich vor jeder Änderung nach dem Umfang. Er installiert
-nicht automatisch das gesamte Paket.
-
-## Was du auswählen kannst
-
-| Baustein | Nutzen |
-| --- | --- |
-| Handoff-Schutz | Handoff-Skill, Session-Ende-Hook und optionaler PreCompact-Snapshot |
-| Engineering-Skills | Planung, Tests, Debugging, Verifikation und Code-Review |
-| Security-Skills | Grundlagen und Threat Modeling |
-| n8n-Skills | Unterstützung für n8n-Workflows |
-| Rollenprofile | Scout, Researcher, Worker, Reviewer, Advisor und Orchestrator |
-| Lokale Insights | Lokale Auswertung von Codex-Sessions; standardmäßig deaktiviert |
-
-Vor einer Änderung von `hooks.json` oder `config.toml` erstellt der Installer
-eine zeitgestempelte Sicherung. Bereits vorhandene Toolkit-Dateien werden ohne
-`--overwrite` nicht ersetzt.
-
-## Context-Snapshot bei wenig Restkontext
-
-Wenn du den Handoff-Schutz auswählst, kann der Installer eine automatische
-Compaction-Schwelle setzen. Er fragt dafür nach der Größe des Kontextfensters
-deines Modells und dem gewünschten Restkontext. Bei einem 272.000-Token-Fenster
-und 20 % Restkontext setzt er die Schwelle auf 217.600 Tokens.
-
-Der `PreCompact`-Hook schreibt unmittelbar vor einer automatischen Compaction
-einen Snapshot nach `docs/handoffs/AUTO_<Zeitstempel>.md` im aktuellen Projekt.
-Nach der Installation musst du Codex neu starten und den neuen Hook über
-`/hooks` einmal prüfen und vertrauen.
-
-## Normal verwenden
-
-Für eine bewusste Übergabe verwende `/handoff` oder beende die Arbeit mit einer
-klaren Formulierung wie „Ende für heute“. Das vollständige Handoff enthält
-Entscheidungen, geänderte Dateien, Verifikation und nächste Schritte. Der
-automatische Snapshot dient als Sicherheitsnetz, nicht als Ersatz dafür.
-
-## Lokale Daten und Grenzen
-
-Das Handoff liegt im jeweiligen Projekt unter `docs/handoffs/`. Lokale Insights
-werden erst nach Auswahl installiert und bleiben deaktiviert, bis Codex mit
-`CODEX_TOOLKIT_ENABLE_INSIGHTS=1` gestartet wird. Öffentliche Recherche bleibt
-separat deaktiviert.
-
-Der Hook kann einen Arbeitsstand sichern, aber keine vollständige inhaltliche
-Übergabe ohne einen Codex-Lauf formulieren. Prüfe daher Handoffs und Snapshots,
-bevor du dich auf sie für kritische Arbeiten verlässt.
-
-## Hilfe und Wiederherstellung
-
-- Lies nach einer Installation die Ausgabe des Installers; sie nennt jede
-  installierte oder übersprungene Datei.
-- Falls ein Hook nicht läuft, öffne in Codex `/hooks` und prüfe dessen
-  Vertrauensstatus.
-- Die Sicherungen des Installers liegen neben der geänderten Konfigurationsdatei
-  und tragen den Zusatz `.toolkit-backup-…`.
-- Für eine vollständige Neuinstallation kannst du den Installer erneut mit den
-  gewünschten Optionen starten; `--overwrite` ersetzt nur Toolkit-Dateien.
-
-Das Paket wird ohne Gewähr bereitgestellt.
+GPL v3. [Prüfnachweis](../tests/PRUEFBERICHT.md).

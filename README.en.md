@@ -1,53 +1,16 @@
-![KI AffAIrs](docs/assets/ki-affairs-github-readme-banner.png)
-
 # KI AffAIrs Handoff
 
-Practical installation packages for reliable handoffs in coding agents. They
-help preserve a useful work record before a session ends or the context is
-compacted.
+Current Codex download: [ki-affairs-handoff-1.2.0.zip](codex/releases/ki-affairs-handoff-1.2.0.zip).
+Python 3.11+, macOS/Linux. Extract and run `python3 install.py`; restart Codex and review/trust hooks via `/hooks`.
 
-[🇩🇪 Deutsche Anleitung](README.md) · [🇬🇧 English guide](docs/guides/INSTALLATION.en.md)
+Only Handoff is installed: full handoff skill, local snapshot, session-end reminder.
+[Instructions](codex/handoff-package/README.md) · [German guide](docs/guides/INSTALLATION.de.md).
+For an intentional upgrade of existing different files, review the changes and use
+`python3 install.py --overwrite`. Existing files are backed up before replacement.
+Legacy 1.1.0 is retained for history and is not the current recommendation.
 
-## Who is this for?
-
-It is for people and teams who work with Codex over longer sessions and want to
-retain decisions, changed files, verification results, and next steps outside
-the chat. Each agent has its own implementation because hooks and installation
-steps differ between Codex and Claude.
-
-## Codex quick start
-
-1. Download the latest ZIP from [codex/releases](codex/releases/).
-2. Extract it and run `python3 install.py`.
-3. Select only the components you want to use.
-4. Restart Codex and review and trust newly added hooks through `/hooks`.
-
-The complete Codex documentation is available in [German](codex/README.md)
-and [English](codex/README.en.md).
-
-## Variants
-
-| Variant | Status | Purpose |
-| --- | --- | --- |
-| [Codex](codex/) | available | Interactive installer, handoff skill, and optional context snapshot |
-| [Claude](claude/) | available | Handoff skill, `PreCompact`/`SessionEnd` hooks, and an optional phrase nudge, installed via `bash claude/install.sh` |
-
-## What is preserved
-
-The Codex handoff records decisions, changed files, verification, and concrete
-next steps. The optional `PreCompact` hook also writes a minimal local state
-snapshot to the current project's `docs/handoffs/` directory before automatic
-context compaction.
-
-## Important limits
-
-- A snapshot is not a substitute for a deliberate, written handoff.
-- Codex hooks must be reviewed and trusted once.
-- Local Insights and public research remain disabled until you explicitly
-  enable them.
-- The package is provided without warranty. Review the selected scope before
-  using it in production or regulated environments.
-
-## License
-
-This repository is licensed under the [GNU GPL v3](LICENSE).
+A snapshot is not a full semantic handoff. The optional threshold configures compaction;
+it does not clear context automatically or guarantee error-free model responses.
+Write and verify a full handoff before a fresh session.
+The separate Claude variant is legacy and not covered by the 1.2.0 Codex test report.
+GNU GPL v3.
