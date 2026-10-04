@@ -1,28 +1,13 @@
-# Installation und Auswahlumfang
+# Installation · KI AffAIrs Handoff 1.2.0
 
-[🇩🇪 Deutsche Startseite](../../README.md) · [🇬🇧 English version](INSTALLATION.en.md)
+[Download: ki-affairs-handoff-1.2.0.zip](../../codex/releases/ki-affairs-handoff-1.2.0.zip).
+Python 3.11+, macOS/Linux. ZIP entpacken und `python3 install.py` ausführen.
+Es wird ausschließlich Handoff installiert. Codex neu starten; `/hooks` prüfen und vertrauen.
 
-1. Lade die aktuelle Codex-Datei aus [codex/releases](../../codex/releases/) herunter.
-2. Entpacke die ZIP-Datei.
-3. Öffne ein Terminal im entpackten Ordner und starte `python3 install.py`.
-4. Beantworte jede Umfangsfrage. Mit Enter übernimmst du die angezeigte
-   Standardauswahl.
-5. Starte Codex neu. Öffne `/hooks` und vertraue neue Hook-Definitionen nach
-   Prüfung.
+Bei bestehenden abweichenden Dateien: Änderungen prüfen und bewusst `python3 install.py --overwrite`
+verwenden. Vor der Ersetzung werden Sicherungen angelegt. Frühere manuelle Hooks gesondert prüfen.
+Keine alten `--handoff --engineering`-Argumente verwenden.
 
-Du kannst die Auswahl auch für automatisierte Installationen explizit angeben:
-
-```sh
-python3 install.py --yes --handoff --engineering
-```
-
-Eine Restkontext-Schwelle benötigt zusätzlich das Kontextfenster deines
-Modells:
-
-```sh
-python3 install.py --yes --handoff --configure-compaction \
-  --context-window 272000 --remaining-context-percent 20
-```
-
-Die Installationsdateien liegen unter `~/.codex/`. Deine Projekt-Snapshots
-liegen dagegen im jeweiligen Projekt unter `docs/handoffs/`.
+[Ausführliche Anleitung, Schwelle und Funktionstest](../../codex/handoff-package/README.md).
+Ein Snapshot ist kein vollständiges Handoff. Erst vollständige Übergabe speichern und prüfen,
+dann neu starten. Alte 1.1.0 ist historisch und keine aktuelle Empfehlung.
